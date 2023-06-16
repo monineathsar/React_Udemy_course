@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import Expenses from './components/Expenses';
 
@@ -26,12 +27,22 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ]
+// below is example of JSX syntax
   return (
     <div>
       <h2>Let's get started!</h2>
       <Expenses items={expenses} />
     </div>
   );
+
+  // below an alternative to JSX syntax
+  // return React.createElement(
+  //   'div', 
+  //   {}, 
+  //   React.createElement('h2', {}, "Let's get started!"),
+  //   React.createElement(Expenses, {items: expenses})
+  // );
+
 }
 
 export default App;
